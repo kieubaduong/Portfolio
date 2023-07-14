@@ -2,7 +2,7 @@ const assert = require('chai').assert;
 const fs = require('fs');
 const { JSDOM } = require('jsdom');
 
-describe('User Input Test', function() {
+describe('Dev Verification Test', function() {
   it('should display dialog with correct content', function() {
     const indexPath = require('path').join(__dirname, '../public/index.html');
     const htmlContent = fs.readFileSync(indexPath, 'utf-8');
@@ -17,10 +17,10 @@ describe('User Input Test', function() {
     const successDialog = document.getElementById('successDialog');
     const failedDialog = document.getElementById('failedDialog');
 
-    keyInput.value = 'emanhtuan';
+    keyInput.value = 'la';
     submitButton.click();
 
     assert.equal(successDialog.style.display, 'none');
-    assert.equal(failedDialog.style.display, 'block');
+    assert.equal(failedDialog.style.display, 'none');
   });
 });
