@@ -4,6 +4,7 @@
 <head>
   <title>Portfolio</title>
   <link rel="stylesheet" href="src/index.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
 </head>
 
 <body>
@@ -45,7 +46,10 @@
 
     function verifyDev() {
       var input = document.getElementById("keyInput").value;
-      if (input == "emanhtuan") {
+      var hashedKey = CryptoJS.MD5(input).toString();
+
+      var preDefinedHashedKey = "d15cbc9cd47129f3f7143598c8ae39bc";
+      if (hashedKey == preDefinedHashedKey) {
         document.getElementById("successDialog").style.display = "block";
         document.getElementById("failedDialog").style.display = "none";
       }
