@@ -15,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "mocha",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -37,6 +37,8 @@
     ]
   },
   "devDependencies": {
-    "jsdom": "^22.1.0"
+    "chai": "^4.3.7",
+    "jsdom": "^22.1.0",
+    "mocha": "^10.2.0"
   }
 }

@@ -4,7 +4,8 @@ const { JSDOM } = require('jsdom');
 
 describe('User Input Test', function() {
   it('should display dialog with correct content', function() {
-    const htmlContent = fs.readFileSync('index.html', 'utf-8');
+    const indexPath = require('path').join(__dirname, '../public/index.html');
+    const htmlContent = fs.readFileSync(indexPath, 'utf-8');
 
     const dom = new JSDOM(htmlContent);
 
