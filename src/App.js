@@ -21,12 +21,6 @@ function App() {
     const isValidPassword = hashedKey === preDefinedHashedKey;
     setSuccessDialogVisible(isValidPassword);
   };
-  
-  const Space = ({ size }) => {
-    return (
-      <div style={{ height: size, width: size, display: "inline-block", verticalAlign: "top" }} />
-    );
-  };
 
   return (
     <div>
@@ -34,8 +28,10 @@ function App() {
         <h1>Are you a good dev or gher dev?</h1>
 
         <div style={{ display: "flex", justifyContent: "center", marginBottom: "3vh", marginTop: "3vh" }}>
-          <input data-testid='keyInput' type="text" id='keyInput' placeholder="Enter key" onChange={(e) => setKey(e.target.value)} />
-          <Space size="20px" />
+          <input data-testid='keyInput'
+            type="text" id='keyInput' placeholder="Enter key" 
+            onChange={(e) => setKey(e.target.value)} 
+            style={{marginRight:'20px'}}/>
           <button id='submitBtn' data-testid='submitBtn' onClick={handleSubmit}>Submit</button>
         </div>
 
@@ -43,10 +39,10 @@ function App() {
 
       <VerifyDialog isSuccess={successDialogVisible} style={{ marginBottom: '3vh' }} />
 
-      <GetInfoButton style={{ display: 'flex', margin: 'auto' }} onClick={() => getTestopsInfo()}
+      <GetInfoButton style={{ display: 'flex', margin: 'auto'}} onClick={() => getTestopsInfo()}
       >Get info</GetInfoButton>
 
-    </div>
+    </div >
   );
 }
 
