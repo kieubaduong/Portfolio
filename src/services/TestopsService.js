@@ -1,10 +1,10 @@
 import { baseUrl } from "../core/constants.js";
 
-
-const getTestopsInfo = () => {
-    return fetch(baseUrl + 'info')
-        .then(response => response.json())
-        .then(data => console.log(data));
-}
+const getTestopsInfo = async () => {
+    console.log(baseUrl + 'info');
+    const response = await fetch(baseUrl + 'info', {
+        mode: 'no-cors'
+    });
+    console.log(response);};
 
 export { getTestopsInfo };
