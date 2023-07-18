@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.dialog {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.sizedBox{
+  height: 5vh;
+}
