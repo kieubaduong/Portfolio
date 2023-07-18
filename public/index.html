@@ -1,64 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" id="root">
+<html lang="en">
 
 <head>
   <title>Portfolio</title>
-  <link rel="stylesheet" href="src/index.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>p
 </head>
 
 <body>
-  <div class="container" >
-    <div id="verifyComponents">
-      <h1>Are you a good dev or gher dev?</h1>
-
-      <input type="text" id="keyInput" placeholder="Enter key" />
-      <button id="submitBtn" onclick="verifyDev()">Submit</button>
-    </div>
-
-    <div class="sizedBox"></div>
-
-    <div id="successDialog" style="display: none;" class="dialog">
-      <h2>Congrats</h2>
-      <p>You are a good dev</p>
-    </div>
-
-    <div id="failedDialog" style="display: none;" class="dialog">
-      <h2>Congrats</h2>
-      <p>You are a gher dev</p>
-    </div>
+  <div id="root">
+    
 
   </div>
-
-  <script>
-    var input = document.getElementById("keyInput");
-    input.addEventListener("focus", () => {
-      input.focus();
-    })
-
-    document.addEventListener("keydown", function (event) {
-      var isBtnEnterPressed = event.keyCode === 13;
-      if (isBtnEnterPressed) {
-        event.preventDefault();
-        verifyDev();
-      }
-    });
-
-    function verifyDev() {
-      var input = document.getElementById("keyInput").value;
-      var hashedKey = CryptoJS.MD5(input).toString();
-
-      var preDefinedHashedKey = "d15cbc9cd47129f3f7143598c8ae39bc";
-      if (hashedKey == preDefinedHashedKey) {
-        document.getElementById("successDialog").style.display = "block";
-        document.getElementById("failedDialog").style.display = "none";
-      }
-      else {
-        document.getElementById("successDialog").style.display = "none";
-        document.getElementById("failedDialog").style.display = "block";
-      }
-    }
-  </script>
 </body>
 
 </html>
