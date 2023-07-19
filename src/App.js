@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import CryptoJS from "crypto-js";
 import { VerifyDialog } from './components/VerifyDialog.js';
 import { GetInfoButton } from './components/GetInfoButton.js';
-import { getTestopsInfo } from './services/TestopsService.js';
+import { getTestopsInfo, getUsers, makeHttpRequest } from './services/UserService.js';
 
 function App() {
 
@@ -39,7 +39,7 @@ function App() {
 
       <VerifyDialog isSuccess={successDialogVisible} style={{ marginBottom: '3vh' }} />
 
-      <GetInfoButton style={{ display: 'flex', margin: 'auto'}} onClick={() => getTestopsInfo()}
+      <GetInfoButton style={{ display: 'flex', margin: 'auto'}} onClick={() => getUsers()}
       >Get info</GetInfoButton>
 
     </div >
