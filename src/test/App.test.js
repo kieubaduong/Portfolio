@@ -15,6 +15,7 @@ function generateRandomString() {
     return result;
 }
 
+
 describe("Verify dev screen", () => {
     it("Web should display success dialog", () => {
         render(<App/>);
